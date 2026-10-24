@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+. ./json-parse.bash || exit 1
+
+for f in ./tests/*.json; do
+	echo "$f"
+	json-parse < "$f" || exit 1
+done
